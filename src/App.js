@@ -1,7 +1,9 @@
 import { Route } from "react-router-dom";
+
 import Welcome from "./pages/Welcome";
 import Products from "./pages/Products";
 import MainHeader from "./component/MainHeader";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -14,9 +16,14 @@ function App() {
         <Route path="/products">
           <Products />
         </Route>
+        <Route path="/product-detail/:productId">
+          <ProductDetail />
+        </Route>
       </main>
     </div>
   );
 }
+
+// : is a must, that is a dynamic route and productId can be anything
 
 export default App;
